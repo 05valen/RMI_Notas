@@ -1,7 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+
+/**
+ * TRABAJO 1 RMI
+ * Proyecto integrador 
+ * @author Valentina Restrepo Castrillon 
+ * @author Satiago Quiceno Betancur
  */
 package Server;
 
@@ -10,10 +12,6 @@ import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 
-/**
- *
- * @author valen
- */
 public class CalcServer {
    public static void main(String []args) throws RemoteException
     { 

@@ -1,17 +1,10 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package Interface;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
 
-/**
- *
- * @author valen
- */
+
 public interface CalcInterface extends Remote{
      
           public float[][] generarMat(int numEstudent, int numNotas, int choice) throws RemoteException;

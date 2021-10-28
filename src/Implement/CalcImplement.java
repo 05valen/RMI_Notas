@@ -1,7 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * TRABAJO 1 RMI
+ * Proyecto integrador 
+ * @author Valentina Restrepo Castrillon 
+ * @author Satiago Quiceno Betancur
  */
 package Implement;
 
@@ -9,10 +10,7 @@ import Interface.CalcInterface;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
-/**
- *
- * @author valen
- */
+
 public class CalcImplement extends UnicastRemoteObject implements CalcInterface {
 
     public int numEstudent;
@@ -47,10 +45,6 @@ public class CalcImplement extends UnicastRemoteObject implements CalcInterface 
 
         for (int i = 0; i < numEstudent; i++) {
             for (int j = 0; j < numNotas; j++) {
-              
-               /*aux=(float) (Math.random() * 4.0 + 1);
-               aux=Math.round((aux*100)/100)/100f;
-               matrizNotas[i][j] = aux;*/
                     double precision = Math.pow(10, 1);
                     double minimo = 1*precision;
                     double maximo = 5*precision;
@@ -81,7 +75,6 @@ public class CalcImplement extends UnicastRemoteObject implements CalcInterface 
 
         for (int j = 0; j < numNotas; j++) {
            for (int i = 0; i < numEstudent; i++) {
-        
                 System.out.println(matrizNotas[i][j]);
                 if (matrizNotas[i][j] > mayor) {
                     mayor = matrizNotas[i][j];
@@ -123,7 +116,6 @@ public class CalcImplement extends UnicastRemoteObject implements CalcInterface 
         }
             promedio=(notas/(numNotas*numEstudent));
             System.out.println("El promedio del grupo es " + promedio);
-        
         return promedio;
     }
     
@@ -164,6 +156,5 @@ public class CalcImplement extends UnicastRemoteObject implements CalcInterface 
                 System.out.println("ERROR");
                 return 0;
         }
-    
     }
 }
