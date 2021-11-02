@@ -5,14 +5,11 @@
  * @author Satiago Quiceno Betancur
  */
 package Implement;
-
 import Interface.CalcInterface;
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 
-
 public class CalcImplement extends UnicastRemoteObject implements CalcInterface {
-
     public int numEstudent;
     public int numNotas;
     public float matriz[][];
@@ -134,10 +131,10 @@ public class CalcImplement extends UnicastRemoteObject implements CalcInterface 
     @Override
     public float[] calculateMin_Max(float[][] matrizNotas, int choice, float[] vectorNotas, int numNotas, int numEstudent) throws RemoteException {
         switch (choice) {
-            case 2:
+            case 3:
                 System.out.println(matrizNotas);
                 return MenorNota(matrizNotas, vectorNotas, numNotas, numEstudent);
-            case 3:
+            case 4:
                 System.out.println(matrizNotas);
                 return MayorNota(matrizNotas, vectorNotas, numNotas, numEstudent);
             default:
@@ -149,7 +146,7 @@ public class CalcImplement extends UnicastRemoteObject implements CalcInterface 
     @Override
     public float promedioGrupal(float[][] matrizNotas, int choice, int numNotas, int numEstudent) throws RemoteException {
             switch (choice) {
-            case 4:
+            case 5:
                 System.out.println(matrizNotas);
                 return PromedioGrupal(matrizNotas,numNotas,numEstudent);
             default:

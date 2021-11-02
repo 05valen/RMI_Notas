@@ -6,7 +6,6 @@
  * @author Satiago Quiceno Betancur
  */
 package Server;
-
 import Implement.CalcImplement;
 import java.rmi.RemoteException;
 import java.rmi.registry.LocateRegistry;
